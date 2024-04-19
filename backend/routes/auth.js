@@ -10,6 +10,7 @@ router.get('/login/success', async (req, res) => {
     if(req.user){
         console.log(req.user)
         try{
+            //saves the code to mongodb (idk why it cant)
             const user = await User.create({
             name: req.user.name.givenName,
             id: req.user.id,
@@ -18,6 +19,7 @@ router.get('/login/success', async (req, res) => {
             res.status(200).json({
             error: false,
             message: "Successfully Logged In",
+            user: req.user
             })
         }catch(error){
             console.log(error)
