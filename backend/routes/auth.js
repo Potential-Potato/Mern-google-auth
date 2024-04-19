@@ -7,24 +7,25 @@ const User = require('../models/user')
 
    
 router.get('/login/success', async (req, res) => {
-    // const user = await User.create({
-    //     name: req.user.name,
-    //     id: req.useruser.id,
-    //     email: req.user.email,
-
-    // })
-    if(req.user){   // If user exists in session, send user dat
-        res.status(200).json({
+    if(req.user){
+        console.log(req.user)
+        try{
+            const user = await User.create({
+            name: req.user.name.givenName,
+            id: req.user.id,
+            email: req.user.email
+        })
+            res.status(200).json({
             error: false,
             message: "Successfully Logged In",
-            user: req.user
-        })  
-      
-    }else{  // Otherwise, send unauthorized error
-        res.status(403).json({
-            error: true,
-            message: "Not Authorize"
-        })
+            })
+        }catch(error){
+            console.log(error)
+            res.status(403).json({
+                error: true,
+                message: "Not Authorize"
+            })
+       }
     }
 });
 

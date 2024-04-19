@@ -1,13 +1,26 @@
-const mongoose = require('mongoose')
+// models/user.js
 
+const mongoose = require('mongoose');
+
+// Define the user schema
 const userSchema = new mongoose.Schema({
-    name: String,
-    id: mongoose.Schema.ObjectId,
+    name: {
+        type: String,
+
+    },
+    id: {
+        type: String,
+        unique: true
+    },
     email: {
         type: String,
         unique: true
     },
-})
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+});
 
-const UserModel = mongoose.model('User', userSchema)
-module.exports = UserModel
+// Create and export the User model
+module.exports = mongoose.model('User', userSchema);
