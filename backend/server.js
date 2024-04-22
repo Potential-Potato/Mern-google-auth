@@ -7,8 +7,10 @@ const cors = require('cors');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser');
 const passportSetup = require('./passport'); // Import passport setup
 const authRoute = require('./routes/auth'); // Import authentication routes
+const postRoute = require('./routes/post')
 
 // Create an Express application
 const app = express();
@@ -23,8 +25,8 @@ mongoose.connect(process.env.MONGO_URL)
     console.log('Database not connected', err)
 })
 
-// Middleware setup
-
+// // Middleware setup
+app.use(express.json())
 // Configure cookie session to manage user sessions
 app.use(
     cookieSession({
@@ -51,6 +53,7 @@ app.use(
 
 // Mount authentication routes under /auth path
 app.use('/auth', authRoute);
+app.use('/post', postRoute)
 
 // Start the server
 

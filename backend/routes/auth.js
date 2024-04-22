@@ -4,31 +4,36 @@ const passport = require('passport');
 const User = require('../models/user')
 
 // Route for successful login
-
-   
 router.get('/login/success', async (req, res) => {
-    if(req.user){
-        console.log(req.user)
         try{
-            //saves the code to mongodb (idk why it cant)
-            const user = await User.create({
-            name: req.user.name.givenName,
-            id: req.user.id,
-            email: req.user.email
-        })
-            res.status(200).json({
-            error: false,
-            message: "Successfully Logged In",
-            user: req.user
-            })
+            const existingUser = await User.findOne({ id: req.user.id });
+            if(existingUser) {
+                // If user exists, just send success response
+                res.status(200).json({
+                    error: false,
+                    message: "Successfully Logged In",
+                    user: req.user
+                });
+            } else {
+                // If user doesn't exist, create a new user with Google account ID
+                const newUser = await User.create({
+                    name: req.user.name.givenName,
+                    id: req.user.id, // Using Google ID from _json object
+                    email: req.user.emails[0].value 
+                });
+                //login code
+                res.status(200).json({
+                    error: false,
+                    message: "Successfully Logged In",
+                    user: req.user
+                })
+            }
         }catch(error){
-            console.log(error)
             res.status(403).json({
                 error: true,
                 message: "Not Authorize"
             })
        }
-    }
 });
 
 // Route for failed login

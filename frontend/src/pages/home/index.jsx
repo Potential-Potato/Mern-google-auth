@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Home = (userDetails) => {
     const user = userDetails.user
     const logout = () => {
@@ -25,6 +27,7 @@ const Home = (userDetails) => {
                         </div>
                     ))}
                     <button onClick={logout}>Log Out</button>
+                    <Link to={'/post'}>post</Link> 
                 </div>
             </div>
         </div>
