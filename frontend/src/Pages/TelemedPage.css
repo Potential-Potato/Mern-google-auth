@@ -1,0 +1,35 @@
+.telemed {
+  display: flex;
+  flex-direction: column;
+  margin: 6% 21% 0% 12%;
+}
+
+.telemed-container {
+  background-color: rgba(138, 138, 138, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.telemed-container a {
+  color: blue; /* Set the color of the links to aqua */
+}
+
+.telemed-title {
+  color: #003163;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.link1 h3 {
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+.trouble {
+  font-size: 12px;
+  padding-top: 15px;
+  color: #18181b;
+}

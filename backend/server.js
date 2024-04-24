@@ -10,7 +10,6 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 const passportSetup = require('./passport'); // Import passport setup
 const authRoute = require('./routes/auth'); // Import authentication routes
-const postRoute = require('./routes/post')
 
 // Create an Express application
 const app = express();
@@ -31,7 +30,7 @@ app.use(express.json())
 app.use(
     cookieSession({
         name: "session",
-        keys: ["seer"], // Array of secret keys to sign session data
+        keys: ["neil"], // Array of secret keys to sign session data
         maxAge: 24*60*60*100 // Session expiration time in milliseconds
     })
 );
@@ -53,7 +52,6 @@ app.use(
 
 // Mount authentication routes under /auth path
 app.use('/auth', authRoute);
-app.use('/post', postRoute)
 
 // Start the server
 

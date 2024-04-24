@@ -1,0 +1,131 @@
+.sidebar {
+  display: flex;
+  z-index: 101;
+  background-color: #f8f8ff;
+  height: calc(100vh);
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 210px;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 28px;
+  width: 150px;
+  height: 85px;
+  vertical-align: middle;
+}
+
+.sidebar-list {
+  margin: 140px 0px 0px 16px;
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  row-gap: 24px;
+  list-style-type: none;
+}
+
+.sidebar-list li {
+  padding: 16px;
+  /* margin-top: 8px; */
+  color: black;
+  text-align: left;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-list li:hover,
+.sidebar-list li.active {
+  color: white;
+  background-color: #003163;
+  border-radius: 24px;
+  margin-right: 20px;
+}
+
+.sidebar-list svg {
+  margin-bottom: -6px;
+  margin-right: 14px;
+  transition: fill 0.2s ease;
+}
+
+.sidebar-list li:hover svg {
+  fill: white;
+}
+
+.logout {
+  position: absolute;
+  bottom: 20px;
+  left: 20px; /* Move logout button to the left side */
+  width: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  list-style-type: none;
+}
+
+.logout li {
+  color: black;
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout li svg {
+  margin-right: 8px;
+  transition: fill 0.2s ease;
+}
+.logout li:hover {
+  color: white;
+  background-color: #003163;
+  border-radius: 24px;
+  margin-right: 24px;
+}
+
+.logout li:hover svg {
+  fill: white;
+}
+
+/* Hide logout button when sidebar list takes up more than 50% of the viewport width */
+@media (max-height: 600px) {
+  .logout {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar-list li > *:not(svg) {
+    display: none;
+  }
+
+  .logo {
+    position: fixed;
+    top: 20px;
+    left: 8px;
+    width: 90px;
+    height: 50px;
+    vertical-align: middle;
+  }
+}
+
+.nav-label svg {
+  vertical-align: middle;
+  margin-top: -7px;
+}

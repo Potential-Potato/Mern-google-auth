@@ -1,0 +1,148 @@
+.index {
+  display: absolute;
+  position: fixed;
+  /* background-color: yellow;   */
+  width: 67%;
+  height: 300px;
+  margin-left: 240px;
+  margin-top: 4.5%;
+}
+
+.hello {
+  font-size: 36px;
+  font-weight: 500;
+  color: #252525;
+  margin-left: -15px;
+}
+.welcome {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to right, #003163, #13072e);
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+}
+
+.welcome h1 {
+  padding: 40px 50px 40px 30px;
+  width: 80%;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.welcome p {
+  padding: 0px 50px 40px 30px;
+  margin-top: -30px;
+  width: 70%;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.hi {
+  display: absolute;
+  margin-left: 76.6%;
+  margin-top: -19.7%;
+}
+.hi img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  clip-path: polygon(0 0, 70% 0, 70% 100%, 0 100%);
+}
+
+.buttons {
+  margin-left: 50px;
+  margin-top: -80px;
+}
+.learnMore {
+  background-color: white;
+  border: none;
+  color: #003163;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px 10px 4px 0px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.upgrade {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px 10px 4px 0px;
+  cursor: pointer;
+  border-radius: 12px; /* Add border radius to round the corners */
+}
+
+/* .home::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 80px;
+  border-radius: 24px;
+  background-color: aliceblue;
+}
+
+.nav ul li {
+  position: relative; /* Add this to make sure ::after is positioned relative to the list item */
+/* } */
+
+/* .header-bar .header-list li a {
+    text-decoration: none; /* Remove underline from link */
+/* } */
+nav ul li {
+  position: relative;
+  z-index: 1;
+}
+.announce {
+  /* Set a maximum height for the scrollable area */
+  margin-top: 2%;
+  /* background-color: yellow; */
+}
+
+.announcement1 {
+  color: #8a8a8a;
+}
+
+.container2 {
+  background-color: white;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 500px;
+}
+
+.container2::-webkit-scrollbar {
+  display: none;
+}
+
+.container2 {
+  display: grid;
+  row-gap: 30px;
+  align-content: space-between;
+}
+
+.container2 h2 {
+  color: #8a8a8a;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container2 p {
+  color: #252525;
+  font-size: 14px;
+  padding-left: 90%;
+  cursor: pointer;
+}

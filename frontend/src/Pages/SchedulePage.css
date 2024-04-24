@@ -1,0 +1,82 @@
+.schedule-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjusted height */
+}
+
+.calendar-container {
+  width: 80%; /* Adjusted width */
+  max-width: 600px; /* Added max-width */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.calendar-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.react-datepicker {
+  width: 100%; /* Make the date picker fill its container */
+}
+
+.react-datepicker__month {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.react-datepicker {
+  width: 100%;
+}
+
+.react-datepicker__month {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.react-datepicker__day-names {
+  display: flex;
+}
+
+.react-datepicker__week {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 9px;
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.react-datepicker__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.react-datepicker__day:hover {
+  background-color: #ccc;
+}
+
+.react-datepicker__day--outside-month {
+  color: #999;
+}
+
+.react-datepicker__day--selected {
+  background-color: #003163;
+  color: #fff;
+}
+
+.react-datepicker__day--today {
+  font-weight: bold;
+}

@@ -1,0 +1,126 @@
+nav {
+  width: 100%;
+  background: linear-gradient(to right, #003163, #13072e);
+  color: white;
+  padding-left: 200px;
+  padding-left: 12%;
+  position: fixed;
+  top: 0;
+  left: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 101;
+  min-width: 400px;
+  margin-left: 150px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: -13%;
+  margin-bottom: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+nav ul li {
+  margin: 5px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /* Adjust this value to position the underline */
+  transform: translateX(-50%);
+  height: 4px;
+  width: 80px;
+  border-radius: 24px;
+  background-color: aliceblue;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+nav ul li.active::before {
+  opacity: 1;
+}
+nav ul li:hover::before {
+  opacity: 1;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 5px 10px;
+  right: 3%;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav li svg {
+  margin-right: 20px;
+}
+nav li svg:hover {
+  fill: grey;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  nav ul li {
+    margin: 5px 10px;
+    font-size: 16px;
+  }
+
+  nav li {
+    display: sticky;
+    margin: 5px 10px;
+    font-size: 16px;
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 600px) {
+  nav ul {
+    margin-left: 0px;
+    /* margin: 5px 10px; */
+    font-size: 12px;
+  }
+  nav ul li {
+    margin-left: 0px;
+    /* margin: 5px 10px; */
+    font-size: 12px;
+  }
+
+  nav li {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    margin-left: 80px;
+    padding-left: 50px;
+  }
+
+  nav li {
+    font-size: 14px;
+    margin-right: 50px;
+  }
+  nav li svg {
+    display: none;
+  }
+}
+
+.please {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: aquamarine; */
+}

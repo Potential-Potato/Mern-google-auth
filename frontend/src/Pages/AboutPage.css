@@ -1,0 +1,339 @@
+.about {
+  position: relative; /* Set position relative for containing the absolutely positioned lines */
+  margin: 5% 5% 5% 12%;
+  width: 68%;
+}
+
+.hService {
+  display: block;
+  /* background-color: pink; */
+  color: #8a8a8a;
+  margin-bottom: 2%;
+  font-size: 32px;
+  text-align: center;
+}
+.staff-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 5px;
+  z-index: 100;
+  border: 1px solid black;
+}
+
+.staff-label {
+  text-align: center;
+  margin: 15px 15px 15px -60px;
+
+  background-color: #061e44;
+  width: 420px;
+  padding: 2% 10%;
+  border-radius: 24px;
+  vertical-align: middle;
+}
+
+.staff-label {
+  padding: 15px;
+}
+.director,
+.coordinator {
+  display: flex;
+  flex-direction: row;
+  /* background-color: pink; */
+  width: 400px;
+}
+
+.director {
+  margin-left: 35%;
+}
+
+.coordinator {
+  margin-left: 68%;
+  margin-top: 20px;
+}
+
+.director p,
+.director span,
+.coordinator p,
+.coordinator span {
+  color: white;
+}
+
+.director p,
+.coordinator p {
+  font-size: 12px;
+}
+
+.director span,
+.coordinator span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.medical,
+.dental,
+.nursing {
+  background-color: #061e44;
+  color: white;
+  font-size: 26px;
+  width: 400px;
+  padding: 18px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.mdLabel {
+  display: flex;
+  margin: 7% auto;
+  justify-content: space-around;
+}
+
+.med-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-right: 5px;
+  z-index: 100;
+  border: 1px solid black;
+}
+
+.third {
+  display: flex;
+  justify-content: space-between;
+}
+.med {
+  display: flex;
+}
+.med-label,
+.med-label2 {
+  background-color: #061e44;
+  color: white;
+  font-size: 12px;
+  padding: 12px 12px 12px 50px;
+  width: 220px;
+  height: fit-content;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: -40px;
+  margin-top: 10px;
+}
+
+.med-label2 {
+  padding: 20px 20px 20px 50px;
+}
+
+.n-label {
+  background-color: #061e44;
+  color: white;
+  font-size: 12px;
+  padding: 12px 12px 12px 40px;
+  width: 240px;
+  height: fit-content;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: -40px;
+  margin-top: 10px;
+}
+
+.fifth {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.director::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 14%;
+  transform: translateX(-50%);
+  height: 185px;
+  width: 4px;
+  background-color: #061e44;
+}
+.mdLabel::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 31%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 656px;
+  background-color: #061e44;
+}
+
+.medical::before {
+  content: "";
+  position: absolute;
+  left: 24.5%;
+  top: 31%;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 4px;
+  background-color: #061e44;
+}
+
+.dental::before {
+  content: "";
+  position: absolute;
+  left: 75.5%;
+  top: 31%;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 4px;
+  background-color: #061e44;
+}
+
+.medical::after {
+  content: "";
+  position: absolute;
+  left: 24.5%;
+  top: 42%;
+  transform: translateX(-50%);
+  height: 310px;
+  width: 4px;
+  background-color: #061e44;
+}
+
+.dental::after {
+  content: "";
+  position: absolute;
+  left: 75.5%;
+  top: 42%;
+  transform: translateX(-50%);
+  height: 310px;
+  width: 4px;
+  background-color: #061e44;
+}
+
+.nursing::before {
+  content: "";
+  position: absolute;
+  left: 32.5%;
+  top: 70.6%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 212px;
+  background-color: #061e44;
+}
+.nursingL::before {
+  content: "";
+  position: absolute;
+  left: 67.5%;
+  top: 70.6%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 210px;
+  background-color: #061e44;
+}
+
+.nursingL::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 74%;
+  transform: translateX(-50%);
+  height: 52px;
+  width: 4px;
+  background-color: #061e44;
+}
+.nursing::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 78.5%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 1056px;
+  background-color: #061e44;
+}
+
+.m1,
+.m2,
+.m3,
+.m4 {
+  content: "";
+  position: absolute;
+  top: 43%;
+  transform: translateX(-50%);
+  height: 102px;
+  width: 4px;
+  background-color: #061e44;
+}
+
+.m1 {
+  left: 15%;
+}
+
+.m2 {
+  left: 35%;
+}
+
+.m3 {
+  left: 65%;
+}
+
+.m4 {
+  left: 87%;
+}
+
+.n1,
+.n2,
+.n3,
+.n4,
+.n5,
+.n6 {
+  content: "";
+  position: absolute;
+  top: 78.5%;
+  transform: translateX(-50%);
+  height: 70px;
+  width: 4px;
+  background-color: #061e44;
+}
+
+.n1 {
+  left: 9%;
+}
+
+.n2 {
+  left: 24.5%;
+  height: 170px;
+}
+
+.n3 {
+  left: 38%;
+}
+
+.n4 {
+  left: 90.7%;
+}
+
+.n5 {
+  left: 76.5%;
+  height: 170px;
+}
+
+.coordinator::before {
+  content: "";
+  position: absolute;
+  top: 14%;
+  left: 60%;
+  transform: translateX(-50%);
+  height: 100px;
+  width: 4px;
+  border-left: 4px dashed #061e44;
+}
+
+.coordinator::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 64%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  border-top: 4px dashed #061e44;
+}

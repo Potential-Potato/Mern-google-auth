@@ -1,0 +1,74 @@
+.event {
+  display: flex;
+  flex-direction: column;
+  margin: 6% 21% 0% 12%;
+}
+
+.event-container {
+  background-color: rgba(138, 138, 138, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 2%;
+  margin-left: 2%;
+  height: 350px;
+}
+
+.event-title {
+  color: #003163;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.event-about {
+  /* background-color: pink; */
+  max-width: 100%;
+  height: fit-content;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.about-line::before {
+  content: "";
+  position: absolute;
+  left: 46%;
+  top: 40%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 1200px;
+  background-color: #061e44;
+}
+
+.event-detail {
+  background-color: #003163;
+  width: fit-content;
+  padding: 20px 170px 20px 25px;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.interested {
+  background-color: #429d1c;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 110px 10px 10px 0px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.quantity-input {
+  margin-top: 20px;
+}
+
+.quantity {
+  margin-right: 20px;
+}
